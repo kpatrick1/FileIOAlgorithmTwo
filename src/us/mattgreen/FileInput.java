@@ -6,13 +6,19 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * OPEN FILE FOR READING
+ * @author kpatr
+ * @version 1.0.0
  */
 public class FileInput {
 
     private BufferedReader in = null;
     private String fileName;
 
+    /**
+     * CONSTRUCTOR FOR THE FILE TO READ
+     * @param fileName
+     */
     public FileInput(String fileName) {
         this.fileName = fileName;
         try {
@@ -22,6 +28,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * OUTPUT THE CONTENTS OF THE FILE TO THE SCREEN
+     */
     public void fileRead() {
         String line;
         try {
@@ -33,6 +42,10 @@ public class FileInput {
         }
     }
 
+    /**
+     * READ THE NEXT LINE OF THE FILE
+     * @return STRING OF THE NEXT FILE
+     */
     public String fileReadLine() {
         try {
             String line = in.readLine();
@@ -43,6 +56,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * CLOSE THE FILE TO BE READ FROM
+     */
     public void fileClose() {
         if (in != null) {
             try {

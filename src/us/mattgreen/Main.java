@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/**
+ * MOVIE CARD RATINGS APPLICATION TO CALCULATE THE RATINGS OF THE MOVIES
+ * @author kpatr
+ * @version 1.0.0
+ */
 public class Main {
 
     private final static FileInput cardAccts = new FileInput("movie_cards.csv");
@@ -15,6 +20,10 @@ public class Main {
 
     private static Scanner keyboard = new Scanner(System.in);
 
+    /**
+     * STARTING POINT OF THE PROGRAM
+     * @param args INITIAL PARAMETERS ADDED TO THE PROGRAM ON INNITIAL LAUNCH
+     */
     public static void main(String[] args) {
         String line;
         String[] fields;
@@ -36,6 +45,11 @@ public class Main {
         movieOut.fileClose();
     }
 
+    /**
+     * FIND AND COUNT PURCHASES IN FILE
+     * @param acct STRING TO PASS IN
+     * @param nums NUMS AS ARRAY OF SOMETHING
+     */
     public static void findPurchases(String acct, int[] nums) {
         nums[0] = 0;
         nums[1] = 0;
@@ -55,6 +69,9 @@ public class Main {
         }
     }
 
+    /**
+     * SORT THE RATINGS AND OUTPUT TO SCREEN
+     */
     public static void sortRatings() {
         ArrayList<Integer> rating = new ArrayList<Integer>();
         String line;
@@ -88,6 +105,11 @@ public class Main {
 
     }
 
+    /**
+     * FIND THE RATINGS FOR THE ACCT
+     * @param acct STRING
+     * @return double of ratings
+     */
     public static double findRatings(String acct) {
         int countRatings = 0;
         int sumRatings = 0;

@@ -3,13 +3,19 @@ package us.mattgreen;
 import java.io.*;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * FILE TO BE CREATED
+ * @author kpatr
+ * @version 1.0.0
  */
 public class FileOutput {
 
     Writer out = null;
     private String fileName;
 
+    /**
+     * CONSTRUCTOR TO CREATE THE OUTPUT FILE
+     * @param fileName
+     */
     public FileOutput(String fileName) {
         this.fileName = fileName;
         try {
@@ -20,6 +26,10 @@ public class FileOutput {
         }
     }
 
+    /**
+     * STRING TO WRITE TO FILE
+     * @param line
+     */
     public void fileWrite(String line) {
         try {
             out.write(line+"\n");
@@ -29,6 +39,9 @@ public class FileOutput {
         }
     }
 
+    /**
+     * CLOSE THE FILE TO BE WRITTEN TO
+     */
     public void fileClose() {
         if (out != null) {
             try {
